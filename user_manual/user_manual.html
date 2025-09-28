@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Penggunaan - Posnus</title>
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS Global & Reset --- */
+        :root {
+            --primary-color: #037ad7; /* Warna biru Posnus */
+            --dark-color: #1E232B;
+            --gray-color: #6B7280;
+            --light-gray-color: #F3F4F6;
+            --white-color: #ffffff;
+            --note-color: #fffbeb; /* Warna background untuk catatan */
+            --note-border-color: #fde68a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.7;
+            background-color: var(--white-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #0264b3;
+        }
+
+        /* --- Header / Navbar --- */
+        .header {
+            background-color: var(--white-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo img {
+            height: 40px;
+            display: block;
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        /* --- Footer --- */
+        .footer { 
+            background-color: var(--dark-color); 
+            color: var(--white-color); 
+            padding: 40px 0; 
+            margin-top: 60px;
+        }
+        .footer-bottom { 
+            text-align: center; 
+        }
+
+        /* --- User Manual Page Styles --- */
+        .manual-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .manual-header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 40px;
+        }
+
+        .manual-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .manual-header p {
+            font-size: 18px;
+            color: var(--gray-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .manual-section {
+            margin-bottom: 80px;
+        }
+
+        .manual-section h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .manual-section .section-intro {
+            font-size: 16px;
+            color: var(--gray-color);
+            margin-bottom: 30px;
+        }
+
+        .manual-step {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .step-text {
+            flex: 1;
+        }
+
+        .step-text ol {
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .step-text ol li {
+            margin-bottom: 12px;
+        }
+        
+        /* Style untuk catatan/note */
+        .step-note {
+            background-color: var(--note-color);
+            border-left: 4px solid var(--note-border-color);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .step-image {
+            flex: 1;
+        }
+
+        .step-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .manual-footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background-color: var(--light-gray-color);
+            border-radius: 10px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .header nav, .header .btn-primary { display: none; }
+            .manual-step {
+                flex-direction: column-reverse; /* Gambar di atas, teks di bawah */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo_full.png" alt="Logo Posnus">
+            </a>
+            <nav>
+                <a href="../index.html#process">Keunggulan</a>
+                <a href="../index.html#portfolio">Fitur</a>
+                <a href="../index.html#harga">Harga</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="manual-container">
+            <div class="manual-header">
+                <h1>Panduan Penggunaan Posnus</h1>
+                <p>Selamat datang! Halaman ini akan memandu Anda menggunakan fitur-fitur utama Posnus langkah demi langkah. Gampang banget, kok!</p>
+            </div>
+
+            <article class="manual-section">
+                <h2>1. Menyiapkan Data Produk</h2>
+                <p class="section-intro">Sebelum bisa jualan, Anda perlu memasukkan data produk. Dianjurkan untuk membuat kategori terlebih dahulu agar produk lebih terorganisir.</p>
+                <div class="manual-step">
+                    <div class="step-text">
+                        <ol>
+                            <li><strong>Buat Kategori Dulu:</strong> Masuk ke menu **"Produk"**, pilih tab **"Kategori"**, lalu tekan tombol **"+"** untuk membuat kategori baru (contoh: Makanan, Minuman).</li>
+                            <li><strong>Baru Tambah Produk:</strong> Kembali ke tab **"Produk"**, tekan tombol **"+"** di pojok kanan bawah.</li>
+                            <li>Isi semua detail produk seperti Nama, Harga Jual, dan pilih Kategori yang sudah dibuat.</li>
+                            <li>(Opsional) Tambahkan foto produk dan aktifkan **"Manajemen Stok"** jika perlu.</li>
+                            <li>Tekan **"Simpan"**, dan produk Anda pun siap dijual!</li>
+                        </ol>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/600x400/037ad7/FFFFFF?text=Tampilan+Tambah+Produk" alt="Tampilan Tambah Produk di Posnus">
+                    </div>
+                </div>
+            </article>
+
+            <article class="manual-section">
+                <h2>2. Melakukan Transaksi Penjualan</h2>
+                <p class="section-intro">Setelah produk ada, saatnya melakukan penjualan. Prosesnya cepat dan intuitif.</p>
+                <div class="manual-step">
+                    <div class="step-text">
+                        <ol>
+                            <li>Di halaman utama (Kasir), pilih produk yang akan dibeli pelanggan.</li>
+                            <li>Anda bisa mengubah jumlah (Qty) atau menambahkan diskon jika perlu.</li>
+                            <li>Tekan tombol **"Bayar"**.</li>
+                            <li>Masukkan jumlah uang yang dibayarkan pelanggan dan pilih metode pembayaran (Tunai, QRIS, dll).</li>
+                            <li>Selesaikan transaksi. Anda bisa langsung mencetak struk melalui printer bluetooth.</li>
+                        </ol>
+                        <div class="step-note">
+                            <strong>Catatan Penting:</strong> Pilihan pembayaran **QRIS** di aplikasi hanya berfungsi sebagai **pencatatan transaksi**. Aplikasi tidak akan menampilkan kode QR. Anda harus menyediakan cetakan kode QRIS Anda sendiri secara terpisah.
+                        </div>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/600x400/F7C552/1E232B?text=Proses+Pembayaran" alt="Proses Pembayaran di Posnus">
+                    </div>
+                </div>
+            </article>
+
+            <article class="manual-section">
+                <h2>3. Melihat Laporan Penjualan</h2>
+                <p class="section-intro">Pantau performa bisnis Anda melalui laporan penjualan yang detail dan mudah dibaca.</p>
+                 <div class="manual-step">
+                    <div class="step-text">
+                        <ol>
+                            <li>Tekan tombol **"Laporan"** pada menu navigasi bawah.</li>
+                            <li>Laporan akan otomatis menampilkan data penjualan **hari ini**. Untuk tanggal lain, cukup pilih rentang tanggal yang diinginkan.</li>
+                            <li>Lihat produk terlaris, laba kotor, dan data penting lainnya.</li>
+                            <li>Untuk mengekspor, tekan ikon **PDF** atau **CSV** di pojok kanan atas layar.</li>
+                        </ol>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://placehold.co/600x400/037ad7/FFFFFF?text=Halaman+Laporan" alt="Halaman Laporan Penjualan di Posnus">
+                    </div>
+                </div>
+            </article>
+            
+            <div class="manual-footer">
+                <h3>Masih Butuh Bantuan?</h3>
+                <p>Jika ada pertanyaan lebih lanjut, jangan ragu untuk menghubungi kami melalui email di <a href="mailto:support@posnus.biz.id">support@posnus.biz.id</a>.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2025 Posnus. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
